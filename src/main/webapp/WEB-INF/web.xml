@@ -14,8 +14,26 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>PaameldingsBekreftelse</servlet-name>
+        <servlet-class>no.hvl.dat108.oblig4.PaameldingsBekreftelse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaameldingsBekreftelse</servlet-name>
+        <url-pattern>/paameldingsbekreftelse</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Innlogg</servlet-name>
         <servlet-class>no.hvl.dat108.oblig4.Innlogg</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Innlogg</servlet-name>
+        <url-pattern>/innlogg</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loggUt</servlet-name>
+        <servlet-class>no.hvl.dat108.oblig4.LoggUt</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Innlogg</servlet-name>
