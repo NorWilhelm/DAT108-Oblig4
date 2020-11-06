@@ -9,11 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Innlogg
- */
-@WebServlet(name ="Innlogg", urlPatterns= "/Innlogg")
-public class Innlogg extends HttpServlet {
+@WebServlet(name ="loggInn", urlPatterns= "/logginn")
+public class loggInn extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/*
@@ -31,15 +28,16 @@ public class Innlogg extends HttpServlet {
 
 		request.getRequestDispatcher("WEB-INF/loggInn.jsp").forward(request, response);
 	}
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		// TODO: Behandle innloggingen
 		String passord = request.getParameter("passord");
 
-			response.sendRedirect("logginn?feilkode=1");
 
-			response.sendRedirect("Handleside");
+		response.sendRedirect("Handleside");
+
+		// TODO: Feilkode og redirect til samme side ved feil passord fra databasen.
+		// response.sendRedirect("logginn?feilkode=1");
 	}
 }

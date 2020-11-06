@@ -23,12 +23,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Innlogg</servlet-name>
-        <servlet-class>no.hvl.dat108.oblig4.Innlogg</servlet-class>
+        <servlet-name>loggInn</servlet-name>
+        <servlet-class>no.hvl.dat108.oblig4.loggInn</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Innlogg</servlet-name>
-        <url-pattern>/innlogg</url-pattern>
+        <servlet-name>loggInn</servlet-name>
+        <url-pattern>/logginn</url-pattern>
     </servlet-mapping>
 
 </web-app>

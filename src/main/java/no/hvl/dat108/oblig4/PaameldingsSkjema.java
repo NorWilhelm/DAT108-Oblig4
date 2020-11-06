@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Innlogg
- */
 @WebServlet(name ="PaameldingsSkjema", urlPatterns= "/paameldingsskjema")
 public class PaameldingsSkjema extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -31,9 +28,7 @@ public class PaameldingsSkjema extends HttpServlet {
 
         request.getRequestDispatcher("WEB-INF/paameldingsskjema.jsp").forward(request, response);
     }
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-     */
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO: Behandle innloggingen
         String passord = request.getParameter("passord");

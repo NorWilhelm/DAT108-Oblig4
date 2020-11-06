@@ -9,19 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Innlogg
- */
 @WebServlet(name ="LoggUt", urlPatterns= "/loggut")
 public class LoggUt extends HttpServlet {
     private static final long serialVersionUID = 1L;
-
-	/*
-	String password;
-	public void init() {
-		password = getServletConfig().getInitParameter("password");
-	}
-	 */
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -31,9 +21,7 @@ public class LoggUt extends HttpServlet {
 
         request.getRequestDispatcher("WEB-INF/loggUt.jsp").forward(request, response);
     }
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-     */
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO: Behandle innloggingen
         String passord = request.getParameter("passord");
