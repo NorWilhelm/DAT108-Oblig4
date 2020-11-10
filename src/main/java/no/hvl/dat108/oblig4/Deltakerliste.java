@@ -15,18 +15,18 @@ import javax.servlet.http.HttpServletResponse;
 public class Deltakerliste extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    private EntityManagerFactory emf;
+    // TODO: Inkluder deltakerlisteDAO
+    DeltakerlisteDAO test = new DeltakerlisteDAO();
+
 	//public void init() {
 	//}
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // TODO: DB-spørringer. Vurder å bruke egen DeltakerDAO for å hente data
-        EntityManager em = emf.createEntityManager();
-        Deltaker testDeltaker; // Skal være en liste av deltakere
-            testDeltaker = em.find(Deltaker.class, 91100230);
-        ;
-        request.setAttribute("deltaker", testDeltaker);
+
+        Deltaker test = DeltakerlisteDAO.hentTestDeltaker();
+        //request.setAttribute("deltaker", testDeltaker);
 
         // TODO: Feilmeldingsboks
         // List<Melding> meldinger = meldingEAO.henteNSisteMeldinger(visningsantall);
