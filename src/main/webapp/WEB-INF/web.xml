@@ -4,31 +4,22 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <display-name>PameldingServlet</display-name>
+    <welcome-file-list>
+        <welcome-file>PameldingServlet</welcome-file>
+        <welcome-file>BekreftelseServlet</welcome-file>
+        <welcome-file>LoggetUtServlet</welcome-file>
+        <welcome-file>LoginServlet</welcome-file>
+    </welcome-file-list>
+
     <servlet>
-        <servlet-name>PaameldingsSkjema</servlet-name>
-        <servlet-class>no.hvl.dat108.oblig4.PaameldingsSkjema</servlet-class>
+        <display-name>PameldingServlet</display-name>
+        <servlet-name>PameldingServlet</servlet-name>
+        <servlet-class>no.hvl.dat108.PameldingServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PaameldingsSkjema</servlet-name>
+        <servlet-name>PameldingServlet</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>PaameldingsBekreftelse</servlet-name>
-        <servlet-class>no.hvl.dat108.oblig4.PaameldingsBekreftelse</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>PaameldingsBekreftelse</servlet-name>
-        <url-pattern>/paameldingsbekreftelse</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>loggInn</servlet-name>
-        <servlet-class>no.hvl.dat108.oblig4.loggInn</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>loggInn</servlet-name>
-        <url-pattern>/logginn</url-pattern>
     </servlet-mapping>
 
 </web-app>
